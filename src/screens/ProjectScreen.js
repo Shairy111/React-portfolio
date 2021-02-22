@@ -9,9 +9,12 @@ function ProjectScreen() {
 
   const fetchProject = async (e) => {
     try {
+      setLoading(true)
       const { data } = await axios.get("/api/projects");
       setProjects(data);
+      setLoading(false)
     } catch (error) {
+      setLoading(false);
       throw error;
     }
   };
@@ -21,7 +24,8 @@ function ProjectScreen() {
   }, []);
   return (
     <>
-      <Card.Group itemsPerRow={4}>
+    {loading ? <div></div>:
+        <Card.Group itemsPerRow={4}>
         {projects.map((project) => (
           <Project
             id={project._id}
@@ -31,7 +35,10 @@ function ProjectScreen() {
             imgUrl={project.image}></Project>
         ))}
       </Card.Group>
+    
+    }
     </>
+  
   );
 }
 
