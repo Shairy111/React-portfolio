@@ -24,7 +24,7 @@ function ProjectScreen() {
   }, []);
   return (
     <>
-    {loading ? <div></div>:
+    {loading ? <div>loading</div>:
         <Card.Group itemsPerRow={4}>
         {projects.map((project) => (
           <Project
