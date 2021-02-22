@@ -58,48 +58,7 @@ function LoginScreen(props) {
         </div>
       </form>
       )
-      {/* {isAuthenticated && isLogged ? (
-        <div>
-          <h1>{`Welcome ${userName}`}</h1>
-          <Link to="/Admin">Admin Panel</Link>
-          <button onClick={logoutClickHandler}>Logout</button>
-        </div>
-      ) : (
-        <form onSubmit={submitHandler}>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="email">
-              Email
-            </label>
-            <input
-              required
-              class="form-control"
-              id="email"
-              type="text"
-              placeholder="enter Email"
-              onChange={(e) => setEmail(e.target.value)}></input>
-          </div>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="password">
-              Password
-            </label>
-            <input
-              required
-              class="form-control"
-              id="password"
-              type="password"
-              placeholder="enter password"
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}></input>
-          </div>
-          <div>
-            <label></label>
-            <button className="Cardbutton" type="submit">
-              login
-            </button>
-          </div>
-        </form>
-      )} */}
+
     </div>
   );
 }

@@ -57,9 +57,11 @@ function ProjectDetailScreen(props) {
 
         <h2>Tech List</h2>
         <ul>
-          {tech.map((item, b) => (
+          {tech ?tech.map((item, b) => (
             <li key={b}>{item}</li>
-          ))}
+          )):<></> }
+          
+          
         </ul>
         <h1>Project Details</h1>
         <p>
