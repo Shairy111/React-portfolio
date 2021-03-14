@@ -10,7 +10,7 @@ function ProjectScreen() {
   const fetchProject = async (e) => {
     try {
       setLoading(true)
-      const { data } = await axios.get("https://calmportfolio-backend.herokuapp.com/api/projects");
+      const { data } = await axios.get("/api/projects");
       setProjects(data);
       setLoading(false)
     } catch (error) {
